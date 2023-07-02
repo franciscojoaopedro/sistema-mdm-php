@@ -1,0 +1,165 @@
+*{
+    margin:0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+}
+
+body{
+    width: 100%;
+    color: #fff;
+    font-family: sans-serif;
+    background: #ff5d5df1;
+    min-height: 100vh;
+}
+
+header{
+    width: 100%;
+    background: #fff;
+    padding: 25px 80px;
+    display: flex;
+    justify-content: space-between;
+}
+.menu{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.menu ul{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    gap: 15px;
+}
+
+
+.menu ul li{
+    margin: 0px 15px;
+}
+
+.btn_one{
+    
+    color: #dc2626;
+}
+.btn_one:hover{
+    background: #dc2626;
+    color: #fff;
+    padding: 10px 20px;
+    border: 1px solid #dc2626;
+    border-radius:4px;
+    -webkit-border-radius:4px;
+    -moz-border-radius:4px;
+    -ms-border-radius:4px;
+    -o-border-radius:4px;
+}
+header nav{
+    display: flex;
+    justify-content:space-between;
+    align-items: center;
+}
+header nav h1{
+    color: #dc2626;
+}
+
+.app-produtos{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+
+.produto-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.list-produtos{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+.img-produto{
+    width: 100%;
+    margin-bottom: 5px;
+}
+.img-produto img{
+    width: 100%;
+    height: 200px;
+
+}
+.card-produto{
+    padding: 5px;
+    color: #dc2626;
+    border-radius: 8px;
+    width: 250px;
+    height: auto;
+    background: #fff;
+    -webkit-border-radius: 8px;
+    -moz-border-radius: 8px;
+    -ms-border-radius: 8px;
+    -o-border-radius: 8px;
+}
+
+.title{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 16px;
+    font-weight: 100;
+    margin-bottom: 25px;
+    color: #fff;
+    margin-top: 15px;
+    margin-bottom: 10px;
+}
+
+.tabela{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    padding: 30px;
+}
+table{
+    border: none transparent;
+    border-radius: 10px;
+    padding: 15px;
+   
+}
+table thead{
+    background: #dc2626;
+}
+table thead tr td{
+    color: #fff;
+    text-align: center;
+    padding: 15px;
+    font-weight: 500;
+}
+
+table tbody tr{
+    margin: 10px;
+
+}
+table tbody tr td{
+    background: #fff;
+    font-weight: 200;
+    padding: 10px;
+    color: #dc2626;
+}
+
+.btn{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.box-tabela{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
