@@ -58,7 +58,7 @@ endif;
         <section class="login-container">
                 <div class="left">
                     <div class="left-img">
-                        <img src="img/image1.jpeg" alt="">
+                        <img src="../../../public/img/image1.jpeg" alt="">
                     </div>
                 </div>
                 <div class="rigth">

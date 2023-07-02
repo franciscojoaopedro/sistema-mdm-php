@@ -12,7 +12,7 @@ if(!empty($_GET['id'])){
       $resultdelet=$connect->query($sqldelet);
     }
     else{
-        header('Location: ../../pages/Listar_Produtos/index.php');
+      return  header('Location: ../../pages/Listar_Produtos/index.php');
     }
 }
 
