@@ -11,11 +11,11 @@ if(!empty($_GET['id'])){
       $sqldelet="DELETE FROM funcionarios WHERE idfuncionario='$id' ";
       $resultdelet=$connect->query($sqldelet);
       echo" <script>alerte('deletado com sucesso')</script>";
-      header('Location: ../../pages/Listar_Produtos/funcionarios');
+      header('Location: ../../pages/Listar_Produtos/funcionarios.php');
       return ;
     }
     else{
-      header('Location: ../../pages/Listar_Produtos/funcionarios');
+      header('Location: ../../pages/Listar_Produtos/funcionarios.php');
       return ;
     }
 }
