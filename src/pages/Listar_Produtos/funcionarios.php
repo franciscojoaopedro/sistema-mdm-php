@@ -1,12 +1,12 @@
 <?php
-include_once "../../php/db/conectar.php";
+
 session_start();
 $logado=$_SESSION['username'];
+include_once "../../php/db/conectar.php";
 
-$sql = "SELECT 
-tipoCategora,idProduto,NomeProduto,MarcaProduto,
-PrecoUnitario FROM produtos INNER JOIN categorias ON produtos.idCategoria=categorias.idCategoria";
+$sql = "SELECT  * FROM funcionarios";
 $resultado = $connect->query($sql);
+
 
 ?>
 
@@ -18,7 +18,7 @@ $resultado = $connect->query($sql);
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="pageProdutosStyle.css">
    
-    <title>MDM-LISTA-PRODUTOS</title>
+    <title>MDM-LISTA-FUNCIONARIOS</title>
 
   
 </head>
@@ -40,49 +40,50 @@ $resultado = $connect->query($sql);
 </header>
     <div class="app-produtos">
         <div class="title">
-            <h2>Lista de produtos</h2>
+            <h2>Lista de Funcionarios</h2>
         </div>
         <section class="tabela">
         <div class="box-tabela">
             <table border="1" >
                 <thead>
                     <tr>
-                        <td>Id Produto</td>
-                        <td>Nome do Produto</td>
-                        <td>Marca</td>
-                        <td>Preço</td>
-                        <td>Categoria</td>
-                        <td>Editar</td>
-                        <td>Deletar</td>
+                        <td>Numero</td>
+                        <td>Nome do Funcionario</td>
+                        <td>Contacto</td>
+                        <td>Departamento</td>
+                        <td>Funcao</td>
                     </tr>
                 </thead>
                 <tbody id="tbody-list-amigo">
                     <?php
                         while($dados=mysqli_fetch_assoc($resultado)){
                            echo "<tr>";
-                           echo "<td>" .$dados['idProduto']."</td>";
-                           echo "<td>".$dados['NomeProduto']."</td>";
-                            echo "<td>".$dados['MarcaProduto']. "</td>";
-                            echo "<td>".$dados['PrecoUnitario']. "</td>";
-                            echo "<td>".$dados['tipoCategora']."</td>";
+                           echo "<td>" .$dados['idfuncionario']."</td>";
+                           echo "<td>".$dados['nomefuncionario']."</td>";
+                            echo "<td>".$dados['contacto']. "</td>";
+                            echo "<td>".$dados['departamento']. "</td>";
+                            echo "<td>".$dados['funcao']."</td>";
 
                             if($logado){
-
                                 echo "<td>
-                                <a href='../Editar_Produtos/index.php?id=$dados[idProduto]' >Editar</a>
+                                <a href='../Editar_Produtos/funcionarios.php?id=$dados[idfuncionario]' >Editar</a>
                                 </td>";
                                 echo "<td>
-                                <a href='../../php/actions/deleteProduto.php?id=$dados[idProduto]' >Deletar</a>
+                                <a href='../../php/actions/updateFuncionarios.php?id=$dados[idfuncionario]' >Deletar</a>
                                 </td>";
-                            }else{
-                                echo "<td>
-                                <a href='#' >----</a>
-                                </td>";
-                                echo "<td>
-                                <a href='#' >----</a>
-                                </td>";
-                                unset($_SESSION['username']);
                             }
+                            
+                                else{
+                                    echo "<td>
+                                    <a href='#' >----</a>
+                                    </td>";
+                                    echo "<td>
+                                    <a href='#' >----</a>
+                                    </td>";
+                                }
+                            
+                           
+
 
                            echo "</tr>";
                         }

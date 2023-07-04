@@ -8,15 +8,17 @@ if(isset($_POST['btn-cadastrar'])):
     $idCategoria=$_POST['categoria'];
 
    
-    echo(var_dump($_POST));
+    //echo(var_dump($_POST));
     if(empty($NomeProduto) && empty($MarcaProduto)):
         echo "<script> alert('Preencha todos os campos')  </script>";
-       header('Location: ../pages/Cadastrar_Produtos/pageFormProduto.php');
+       header('Location: ../../pages/Cadastrar_Produtos/pageFormProduto.php');
+       return;
     else:
         $sql = "INSERT INTO produtos (NomeProduto,MarcaProduto,PrecoUnitario,idCategoria) VALUES ('$NomeProduto','$MarcaProduto','$PrecoUnitario','$idCategoria') ";
        if( mysqli_query($connect, $sql)){
            echo "<script>alert('Produto Cadastrado')</script>";
-          header('Location:');
+           header('Location: ../../pages/Cadastrar_Produtos/pageFormProduto.php');
+           return;
        }
       
     endif;

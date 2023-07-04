@@ -2,8 +2,8 @@
 <?php
 $severname = "localhost";
 $db_name = "loja_mdm";
-$password = "1234"; // alterar aqui 
-$username = "root"; // aqui também
+$password = "1234"; 
+$username = "root"; 
 
 $connect = mysqli_connect($severname, $username, $password, $db_name);
 if(mysqli_connect_error()):
